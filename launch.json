@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "v2",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8123", "--directory", "slav-stroy-v2"],
+      "port": 8123
+    },
+    {
+      "name": "v3",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8124", "--directory", "slav-stroy-v3"],
+      "port": 8124
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    // Контент виден по умолчанию; скрываем для анимации только при рабочем JS.
+    (function () {
+      var h = document.documentElement; h.className += ' js';
+      setTimeout(function () { if (!window.__revealReady) h.className += ' reveal-all'; }, 2000);
+    })();
+  </script>
+  <title> Слав Строй — щебень, песок и нерудные материалы с доставкой</title>
+  <meta name="description" content="Слав Строй — поставка щебня, песка и ПГС с доставкой. Собственный автопарк, отгрузка от 1 тонны, документы на каждую партию." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Верхняя строка -->
+  <div class="topbar">
+    <div class="wrap topbar__inner">
+      <span class="topbar__i">Ростов-на-Дону · адрес</span>
+      <span class="topbar__sep"></span>
+      <span class="topbar__i">Пн–Пт 8:00–20:00</span>
+      <span class="topbar__spacer"></span>
+      <a href="tel:+73425678901" class="topbar__phone">📞 +7 (342) 567-89-01</a>
+      <!-- ссылки мессенджеров: вставьте свои URL в href="#" -->
+      <a href="#" class="topbar__link">Telegram</a>
+      <a href="#" class="topbar__link">WhatsApp</a>
+      <a href="#" class="topbar__link topbar__link--max">Max</a>
+    </div>
+  </div>
+
+  <!-- Шапка (не залипающая) -->
+  <header class="site-header" id="top">
+    <div class="wrap site-header__inner">
+      <a href="#top" class="brand">
+        <span class="brand__mark">СС</span>
+        <span class="brand__text">
+          <strong>Слав Строй</strong>
+          <small>нерудные материалы</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#materials">Материалы</a>
+        <a href="#why">Преимущества</a>
+        <a href="#process">Как заказать</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="site-header__cta">
+        <a href="#order" class="btn btn--primary">Заказать звонок</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__texture" aria-hidden="true"></div>
+      <div class="wrap hero__inner">
+        <div class="hero__col reveal">
+          <span class="eyebrow eyebrow--accent">Работаем с 2011 года</span>
+          <h1 class="hero__title">Щебень и нерудные материалы <em>с доставкой в день заказа</em></h1>
+          <p class="hero__lead">
+            Гранитный, гравийный и известняковый щебень, песок и ПГС любых фракций.
+            Собственный автопарк, отгрузка от 1 тонны, паспорт качества на каждую партию.
+          </p>
+          <div class="hero__actions">
+            <a href="#order" class="btn btn--primary btn--lg">Оставить заявку</a>
+            <a href="#materials" class="btn btn--ghost btn--lg">Смотреть материалы</a>
+          </div>
+
+          <ul class="hero__stats">
+            <li><b data-count="15" data-suffix="+">15+</b><span>лет на рынке</span></li>
+            <li><b data-count="750" data-suffix=" 000 т">750 000 т</b><span>отгружено</span></li>
+            <li><b data-count="1" data-suffix=" т">1 т</b><span>минимальный заказ</span></li>
+          </ul>
+        </div>
+
+        <!-- ПУСТАЯ ЯЧЕЙКА ПОД ГЛАВНОЕ ФОТО -->
+        <div class="hero__media reveal reveal--d1">
+          <div class="photo-slot photo-slot--hero" data-label="Главное фото">
+            <!-- <img src="images/hero.jpg" alt="Слав Строй — щебень"> -->
+          </div>
+          <div class="hero__tag">
+            <b>7 дней</b><span>приём заявок<br>в неделю</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Лента доверия -->
+    <section class="strip">
+      <div class="wrap strip__inner">
+        <div class="strip__i"><b>Свой автопарк</b><span>самосвалы 10–40 т</span></div>
+        <div class="strip__i"><b>Честный вес</b><span>поверенные весы</span></div>
+        <div class="strip__i"><b>Документы</b><span>паспорт на партию</span></div>
+        <div class="strip__i"><b>Доставка</b><span>в день заказа</span></div>
+      </div>
+    </section>
+
+    <!-- МАТЕРИАЛЫ -->
+    <section class="section" id="materials">
+      <div class="wrap">
+        <header class="head reveal">
+          <span class="head__index">01</span>
+          <div>
+            <span class="eyebrow">Что поставляем</span>
+            <h2 class="head__title">Материалы</h2>
+          </div>
+        </header>
+
+        <div class="grid grid--4">
+          <article class="card reveal">
+            <div class="photo-slot card__media" data-label="Фото"><!-- <img src="images/shcheben.jpg" alt="Щебень"> --></div>
+            <div class="card__body">
+              <h3 class="card__title">Щебень</h3>
+              <ul class="spec">
+                <li><span>Вид</span><b>гранит / гравий</b></li>
+                <li><span>Фракции</span><b>5–20, 20–40, 40–70</b></li>
+              </ul>
+              <a href="#order" class="card__link">Заказать<i>→</i></a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="photo-slot card__media" data-label="Фото"><!-- <img src="images/pesok.jpg" alt="Песок"> --></div>
+            <div class="card__body">
+              <h3 class="card__title">Песок</h3>
+              <ul class="spec">
+                <li><span>Тип</span><b>карьерный / речной</b></li>
+                <li><span>Подготовка</span><b>мытый, сеяный</b></li>
+              </ul>
+              <a href="#order" class="card__link">Заказать<i>→</i></a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="photo-slot card__media" data-label="Фото"><!-- <img src="images/pgs.jpg" alt="ПГС"> --></div>
+            <div class="card__body">
+              <h3 class="card__title">ПГС и ОПГС</h3>
+              <ul class="spec">
+                <li><span>Фракция</span><b>0–80 мм</b></li>
+                <li><span>Назначение</span><b>основания, засыпка</b></li>
+              </ul>
+              <a href="#order" class="card__link">Заказать<i>→</i></a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="photo-slot card__media" data-label="Фото"><!-- <img src="images/otsev.jpg" alt="Отсев"> --></div>
+            <div class="card__body">
+              <h3 class="card__title">Отсев и грунт</h3>
+              <ul class="spec">
+                <li><span>Фракция</span><b>0–5 мм</b></li>
+                <li><span>Также</span><b>чернозём, грунт</b></li>
+              </ul>
+              <a href="#order" class="card__link">Заказать<i>→</i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="section section--paper2" id="why">
+      <div class="wrap">
+        <header class="head reveal">
+          <span class="head__index">02</span>
+          <div>
+            <span class="eyebrow">Почему мы</span>
+            <h2 class="head__title">Преимущества</h2>
+          </div>
+          <p class="head__note">Работаем напрямую с карьерами — без лишних наценок и посредников.</p>
+        </header>
+
+        <div class="grid grid--3">
+          <div class="feature reveal"><span class="feature__n">01</span><h3>Свой автопарк</h3><p>Самосвалы 10–40 тонн. Доставим точно в срок, без простоев.</p></div>
+          <div class="feature reveal"><span class="feature__n">02</span><h3>Честный вес</h3><p>Отгрузка на поверенных весах. Платите только за факт.</p></div>
+          <div class="feature reveal"><span class="feature__n">03</span><h3>Документы</h3><p>Паспорт качества на каждую партию. С НДС и без.</p></div>
+          <div class="feature reveal"><span class="feature__n">04</span><h3>Доставка в день заказа</h3><p>Приём заявок 7 дней в неделю, оперативная отгрузка.</p></div>
+          <div class="feature reveal"><span class="feature__n">05</span><h3>Цена от карьера</h3><p>Прямые поставки держат стоимость ниже рынка.</p></div>
+          <div class="feature reveal"><span class="feature__n">06</span><h3>Менеджер на связи</h3><p>Подберём материал под задачу и нужный объём.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАК ЗАКАЗАТЬ -->
+    <section class="section" id="process">
+      <div class="wrap">
+        <header class="head reveal">
+          <span class="head__index">03</span>
+          <div>
+            <span class="eyebrow">Как мы работаем</span>
+            <h2 class="head__title">4 шага до выгрузки</h2>
+          </div>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal"><span class="step__n">01</span><h3>Заявка</h3><p>Оставьте заявку на сайте или позвоните менеджеру.</p></li>
+          <li class="step reveal"><span class="step__n">02</span><h3>Расчёт</h3><p>Подбираем материал и считаем стоимость с доставкой.</p></li>
+          <li class="step reveal"><span class="step__n">03</span><h3>Отгрузка</h3><p>Грузим на поверенных весах, оформляем документы.</p></li>
+          <li class="step reveal"><span class="step__n">04</span><h3>Доставка</h3><p>Привозим на объект и выгружаем в удобном месте.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ -->
+    <section class="section section--paper2" id="gallery">
+      <div class="wrap">
+        <header class="head reveal">
+          <span class="head__index">04</span>
+          <div>
+            <span class="eyebrow"></span>
+            <h2 class="head__title">наши работы </h2>
+          </div>
+          <p class="head__note"></p>
+        </header>
+
+        <div class="gallery">
+          <div class="photo-slot gallery__big" data-label="Фото"></div>
+          <div class="photo-slot" data-label="Фото"></div>
+          <div class="photo-slot" data-label="Фото"></div>
+          <div class="photo-slot" data-label="Фото"></div>
+          <div class="photo-slot" data-label="Фото"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЗАЯВКА -->
+    <section class="section section--dark" id="order">
+      <div class="wrap order">
+        <div class="order__text reveal">
+          <span class="eyebrow eyebrow--accent">Свяжитесь с нами</span>
+          <h2 class="order__title">Оставьте заявку</h2>
+          <p>Рассчитаем стоимость материалов с доставкой и перезвоним в рабочее время. Бесплатно и ни к чему не обязывает.</p>
+          <div class="order__contacts">
+            <a href="#" class="order__phone">+7 (342) 567-89-01</a>
+            <a href="mailto:" class="order__mail">gemkd.gmail</a>
+          </div>
+        </div>
+
+        <form class="order__form reveal reveal--d1" id="orderForm" novalidate>
+          <div class="field">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" placeholder="Иван" required />
+          </div>
+          <div class="field">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required />
+          </div>
+          <div class="field">
+            <label for="product">Что нужно?</label>
+            <select id="product" name="product">
+              <option>Щебень</option><option>Песок</option><option>ПГС / ОПГС</option>
+              <option>Отсев / грунт</option><option>Другое</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block btn--lg">Отправить заявку</button>
+          <p class="order__note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+          <p class="order__ok" id="orderOk" hidden>Спасибо! Заявка принята — менеджер скоро свяжется с вами.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap wrap--narrow">
+        <header class="head reveal">
+          <span class="head__index">05</span>
+          <div>
+            <span class="eyebrow">Частые вопросы</span>
+            <h2 class="head__title">Вопросы и ответы</h2>
+          </div>
+        </header>
+
+        <div class="faq">
+          <details class="faq__i reveal"><summary>Какой минимальный объём заказа?</summary><div class="faq__a"><p>Отгружаем от 1 тонны. Для крупных объёмов — специальные условия, уточняйте у менеджера.</p></div></details>
+          <details class="faq__i reveal"><summary>За какое время привезёте?</summary><div class="faq__a"><p>При наличии на складе — в день заказа. Точное время согласует менеджер при оформлении.</p></div></details>
+          <details class="faq__i reveal"><summary>Даёте документы на материал?</summary><div class="faq__a"><p>Да, на каждую партию — паспорт качества и сопроводительные документы. Работаем с НДС и без.</p></div></details>
+          <details class="faq__i reveal"><summary>Как происходит оплата?</summary><div class="faq__a"><p>Наличный и безналичный расчёт для физических и юридических лиц. Условия — индивидуально.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section class="section section--paper2" id="contacts">
+      <div class="wrap">
+        <header class="head reveal">
+          <span class="head__index">06</span>
+          <div>
+            <span class="eyebrow">Где нас найти</span>
+            <h2 class="head__title">Контакты</h2>
+          </div>
+        </header>
+
+        <div class="contacts">
+          <ul class="contacts__list reveal">
+            <li><span>Телефон</span><a href="#">+7 (342) 567-89-01</a></li>
+            <li><span>E-mail</span><a href="mailto:">gemin@gmail.com</a></li>
+            <li><span>Адрес</span><p>адрес / город</p></li>
+            <li><span>Режим работы</span><p>Пн–Пт 8:00–20:00, Сб–Вс по заявке</p></li>
+            <li class="contacts__chips"><a href="#" class="chip">Telegram</a><a href="#" class="chip">WhatsApp</a><a href="#" class="chip chip--max">Max</a></li>
+          </ul>
+          <!-- ПУСТАЯ ЯЧЕЙКА ПОД КАРТУ/ФОТО -->
+          <div class="photo-slot contacts__map reveal reveal--d1" data-label="Карта / фото"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a href="#top" class="brand brand--light">
+        <span class="brand__mark">СС</span>
+        <span class="brand__text"><strong>Слав Строй</strong><small>нерудные материалы с доставкой</small></span>
+      </a>
+      <nav class="footer__nav" aria-label="Подвал">
+        <a href="#materials">Материалы</a>
+        <a href="#why">Преимущества</a>
+        <a href="#process">Как заказать</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <p class="footer__copy">© 2026 «Слав Строй». Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- кнопка мессенджера Макс: вставьте ссылку на чат/профиль в href="#" -->
+ 
+  <a href="#order" class="fab fab--order" aria-label="Оставить заявку" title="Оставить заявку">✍</a>
+  <button class="fab fab--up" id="toTop" aria-label="Наверх" hidden>↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
